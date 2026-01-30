@@ -1,0 +1,520 @@
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+  text-align: center;
+  margin: 80px auto 0;
+  max-width: 900px;
+  padding: 0 24px;
+}
+
+/* Hero heading */
+.hero h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 20px 0;
+}
+
+/* Hero description */
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 32px;
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   HERO TEXT REVEAL ANIMATION
+========================================================= */
+
+.hero-title {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+  text-align: center;
+}
+
+.hero-title .line {
+  display: block;
+  overflow: hidden;
+}
+
+.hero-title .mask {
+  display: inline-block;
+  transform: translateX(-110%);
+  opacity: 0;
+  animation: heroTextReveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-title .line:nth-child(1) .mask {
+  animation-delay: 0.1s;
+}
+
+.hero-title .line:nth-child(3) .mask {
+  animation-delay: 0.3s;
+}
+
+@keyframes heroTextReveal {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   PREVIEW SECTION
+========================================================= */
+
+.preview {
+  position: relative;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.preview-mask {
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+}
+
+.preview img {
+  width: 100%;
+  display: block;
+  opacity: 0;
+  transform: translateX(-80px) scale(0.98);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.preview img.is-visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.preview img.is-floating {
+  animation: previewFloatLR 8s ease-in-out infinite;
+}
+
+@keyframes previewFloatLR {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+
+
+
+/* =========================================================
+   BRANDS SECTION
+========================================================= */
+
+.brands {
+  max-width: 1440px;
+  width: 100%;
+  padding: 64px 24px;
+  background: var(--bg);
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* Wrapper to control content width */
+.brands-wrapper {
+  max-width: 1216px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Row of brand logos */
+.brand-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* Individual brand logo – base */
+.brand-row img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+
+  opacity: 0;
+  transform: translateY(24px) scale(0.96);
+  filter: blur(4px);
+
+  transition:
+    opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.3s ease,
+    opacity 0.3s ease;
+
+  will-change: opacity, transform;
+}
+
+/* Visible state */
+.brand-row img.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* Hover interaction (light mode) */
+.brand-row img:hover {
+  transform: translateY(-4px) scale(1.05);
+  filter: brightness(1.1);
+}
+
+.brand-row:hover img {
+  opacity: 0.45;
+}
+
+.brand-row:hover img:hover {
+  opacity: 1;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .brand-row img {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
+
+
+
+/* =========================================================
+   FEATURES SECTION
+========================================================= */
+
+.features {
+  max-width: 1440px;
+  width: 100%;
+  padding: 96px 24px;
+  background: var(--card);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.features > img {
+  height: 32px;
+}
+
+.features > p {
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 160%;
+  text-align: center;
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   FEATURE GRID
+========================================================= */
+
+.feature-grid {
+  max-width: 1216px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 48px;
+}
+
+
+/* =========================================================
+   STATS / ACHIEVEMENTS SECTION
+========================================================= */
+
+.stats {
+  max-width: 1440px;
+  width: 100%;
+  padding: 96px 24px;
+  background: var(--bg);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+/* Section icon */
+.stats-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Section heading */
+.stats h2 {
+  max-width: 800px;
+  width: 100%;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+  color: var(--text);
+}
+
+/* Section description */
+.stats > p {
+  max-width: 800px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Stats grid */
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+/* Individual stat item */
+.stat {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Stat image */
+.stat img {
+  height: 48px;
+}
+
+/* Stat label */
+.stat span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+
+
+
+
+
+/* =========================================================
+   PROCRASTINATORS SECTION
+========================================================= */
+
+.procrastinators {
+  max-width: 1440px;
+  width: 100%;
+  padding: 96px 24px;
+  background: var(--bg);
+  margin: 0 auto;
+}
+
+/* Main grid wrapper */
+.pro-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left side text */
+.pro-left h2 {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.pro-left .intro {
+  max-width: 480px;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+/* Points wrapper */
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pro-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* =========================================================
+   TESTIMONIALS SECTION
+========================================================= */
+
+.testimonials {
+  max-width: 1440px;
+  width: 100%;
+  padding: 96px 24px;
+  margin: 0 auto;
+  background: var(--bg);
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.testimonials .subtitle {
+  max-width: 520px;
+  margin: 0 auto 64px;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--muted);
+}
+
+/* Testimonials grid */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+
+
+/* =========================================================
+   OFFICE SECTION
+========================================================= */
+
+.office {
+  max-width: 1440px;
+  width: 100%;
+  padding: 96px 24px;
+  margin: 0 auto;
+  background: var(--bg);
+}
+
+.office h2 {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.office-subtitle {
+  max-width: 520px;
+  margin-bottom: 64px;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--muted);
+}
+
+/* Office grid */
+.office-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+}
+
+
+/* =========================================================
+   FAQ SECTION
+========================================================= */
+
+.faq {
+  max-width: 1440px;
+  width: 100%;
+  padding: 96px 112px;
+  margin: 0 auto;
+  background: var(--bg);
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.faq-subtitle {
+  max-width: 720px;
+  margin: 0 auto 64px;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--text);
+}
+
+/* FAQ list wrapper */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+
+/* =========================================================
+   DOWNLOAD / CTA SECTION
+========================================================= */
+
+.download {
+  max-width: 1440px;
+  width: 100%;
+  padding: 96px 112px;
+  margin: 0 auto;
+  background: var(--bg);
+}
+
+/* Grid wrapper */
+.download-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.download-left h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.download-left p {
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--text);
+  margin-bottom: 40px;
+}

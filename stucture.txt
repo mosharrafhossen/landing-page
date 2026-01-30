@@ -1,0 +1,59 @@
+project-root/
+│
+├─ index.html
+│
+├─ assets/
+│  │
+│  ├─ css/
+│  │  ├─ base.css          # Reset, variables, global styles
+│  │  ├─ layout.css        # Header, footer, grid layout
+│  │  ├─ components.css    # Buttons, cards, pills, UI parts
+│  │  ├─ sections.css      # Page sections (hero, testimonial, etc.)
+│  │  └─ theme.css         # Dark / light mode overrides
+│  │
+│  ├─ js/
+│  │  ├─ main.js           # DOMContentLoaded, app bootstrap
+│  │  ├─ header.js         # Header, nav, scroll spy, back-to-top
+│  │  ├─ theme.js          # Dark / light toggle
+│  │  ├─ animations.js    # All IntersectionObserver animations
+│  │  ├─ utils.js          # Helper functions (optional)
+│  │  │
+│  │  └─ sections/
+│  │     ├─ faq.js         # FAQ accordion + download CTA scroll
+│  │     ├─ stats.js       # Stats count-up animation
+│  │     ├─ testimonials.js# Testimonials reveal + word animation
+│  │     └─ procrastinators.js # Interactive points + image switch
+│  │
+│  └─ images/
+│     ├─ hero-section/
+│     │  ├─ slothui.png
+│     │  ├─ hero-section-background.png
+│     │  ├─ Desktop-min.png
+│     │  └─ footer.png
+│     │
+│     ├─ brand/
+│     │  ├─ delta.png
+│     │  ├─ boeing.png
+│     │  ├─ spacex.png
+│     │  └─ google.png
+│     │
+│     ├─ features/
+│     │  ├─ Lightning.png
+│     │  ├─ GearSix.png
+│     │  └─ ChartLine.png
+│     │
+│     ├─ status/
+│     │  ├─ Frame.png
+│     │  └─ HouseSimple.png
+│     │
+│     ├─ Testimonials/
+│     │  ├─ XAE.png
+│     │  ├─ Azuny.png
+│     │  ├─ mechatronics.png
+│     │  ├─ sailor.png
+│     │  └─ Asuna.png
+│     │
+│     └─ download/
+│        └─ phone1.png
+│
+└─ README.md               # Project overview (optional but recommended)

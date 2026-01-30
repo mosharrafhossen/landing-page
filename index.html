@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ================= META ================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ================= TITLE ================= -->
+  <title>SlothUI – Complete Landing</title>
+
+  <!-- ================= FONT ================= -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ================= CSS ARCHITECTURE ================= -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+</head>
+
+
+<body>
+<!-- =========================================================
+   HEADER
+   - Logo
+   - Navigation
+   - Theme Toggle
+   - Auth Buttons
+========================================================= -->
+<header class="header">
+
+  <!-- ===== Logo ===== -->
+  <div class="logo">
+    <img src="images/hero-section/slothui.png" alt="SlothUI logo">
+  </div>
+
+  <!-- ===== Mobile Menu Toggle ===== -->
+<button class="menu-toggle" aria-label="Toggle menu">
+  ☰
+</button>
+
+
+  <!-- ===== Main Navigation ===== -->
+  <nav class="nav">
+    <a href="#home">Home</a>
+    <a href="#brands">Brands</a>
+    <a href="#features">Features</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#procrastinators">Procrastinator</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#office">Office</a>
+    <a href="#faq">FAQ</a>
+    <a href="#download">Download</a>
+    <a href="#footer">Footer</a>
+  </nav>
+
+  <!-- ===== Theme Toggle (Light / Dark) ===== -->
+  <button
+    class="theme-toggle"
+    aria-label="Toggle theme"
+    title="Toggle dark mode"
+  >
+    🌙
+  </button>
+
+  <!-- ===== Authentication Buttons ===== -->
+  <div class="auth-buttons">
+    <button class="btn-outline">Sign Up</button>
+    <button class="btn-primary">Log In</button>
+  </div>
+
+</header>
+<!-- ================= HEADER END ================= -->
+
+
+<!-- =========================================================
+   MAIN HERO CONTAINER
+   - Hero Section
+   - Preview Section
+========================================================= -->
+<div class="Main-container">
+
+  <!-- =====================================================
+     HERO SECTION
+     - Animated headline
+     - Subtitle
+     - App store buttons
+  ====================================================== -->
+  <section id="home" class="hero">
+
+    <!-- ===== Animated Hero Title ===== -->
+    <h1 class="hero-title">
+
+      <!-- Line 1 -->
+      <span class="line">
+        <span class="mask">
+          Unleash Your Inner Design
+        </span>
+      </span>
+
+      <br>
+
+      <!-- Line 2 -->
+      <span class="line">
+        <span class="mask">
+          Sloth Today.
+        </span>
+      </span>
+
+    </h1>
+
+    <!-- ===== Hero Subtitle ===== -->
+    <p>
+      Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet.
+    </p>
+
+    <!-- ===== App Store Buttons ===== -->
+    <div class="store-buttons reveal-stores">
+
+      <!-- Apple App Store -->
+      <a
+        href="https://www.apple.com/app-store/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="store-link"
+      >
+        <img
+          src="images/hero-section/App-Store.png"
+          alt="Download on the App Store"
+        >
+      </a>
+
+      <!-- Google Play Store -->
+      <a
+        href="https://play.google.com/store"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="store-link"
+      >
+        <img
+          src="images/hero-section/google-play.png"
+          alt="Get it on Google Play"
+        >
+      </a>
+
+    </div>
+
+  </section>
+  <!-- ================= HERO END ================= -->
+
+
+  <!-- =====================================================
+     PREVIEW SECTION
+     - Desktop UI Preview
+     - Animated reveal (IntersectionObserver)
+  ====================================================== -->
+  <section class="preview">
+
+    <!-- Mask wrapper for reveal animation -->
+    <div class="preview-mask">
+      <img
+        src="images/hero-section/Desktop-min 1.png"
+        alt="Desktop application preview"
+      >
+    </div>
+
+  </section>
+  <!-- ================= PREVIEW END ================= -->
+
+</div>
+<!-- ================= MAIN HERO CONTAINER END ================= -->
+
+<!-- =========================================================
+   BRANDS SECTION
+   - Trusted by global brands
+   - Animated reveal on scroll (IntersectionObserver)
+========================================================= -->
+<section id="brands" class="brands">
+
+  <!-- Wrapper for centered layout -->
+  <div class="brands-wrapper">
+
+    <!-- ===== Brand Row 1 ===== -->
+    <div class="brand-row">
+      <img src="images/brand/delta.png" alt="Delta logo">
+      <img src="images/brand/boeing.png" alt="Boeing logo">
+      <img src="images/brand/spacex.png" alt="SpaceX logo">
+      <img src="images/brand/ibm.png" alt="IBM logo">
+    </div>
+
+    <!-- ===== Brand Row 2 ===== -->
+    <div class="brand-row">
+      <img src="images/brand/uber.png" alt="Uber logo">
+      <img src="images/brand/google.png" alt="Google logo">
+      <img src="images/brand/samsung.png" alt="Samsung logo">
+      <img src="images/brand/addidas.png" alt="Adidas logo">
+    </div>
+
+  </div>
+
+</section>
+<!-- ================= BRANDS END ================= -->
+
+
+<!-- =========================================================
+   FEATURES SECTION
+   - Product capabilities overview
+   - Grid-based feature cards
+========================================================= -->
+<section id="features" class="features">
+
+  <!-- ===== Section Icon / Badge ===== -->
+  <img
+    src="images/features/our-mini.png"
+    alt="Features icon"
+  >
+
+  <!-- ===== Section Subtitle ===== -->
+  <p>
+    Supercharge productivity with powerful tools
+  </p>
+
+  <!-- =====================================================
+     FEATURE GRID
+     - Responsive auto-fit grid
+     - Each card represents one feature
+  ====================================================== -->
+  <div class="feature-grid">
+
+    <!-- ===== Feature Card 1 ===== -->
+    <div class="feature-card">
+      <img src="images/features/Lightning.png" alt="Lightning icon">
+      <h4>Lazy Efficient</h4>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <!-- ===== Feature Card 2 ===== -->
+    <div class="feature-card">
+      <img src="images/features/GearSix.png" alt="Settings gear icon">
+      <h4>Streamlined Process</h4>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <!-- ===== Feature Card 3 ===== -->
+    <div class="feature-card">
+      <img src="images/features/Broom.png" alt="Cleanup broom icon">
+      <h4>Minimal Effort</h4>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <!-- ===== Feature Card 4 ===== -->
+    <div class="feature-card">
+      <img src="images/features/ChartLine.png" alt="Analytics chart icon">
+      <h4>Data Insights</h4>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <!-- ===== Feature Card 5 ===== -->
+    <div class="feature-card">
+      <img src="images/features/BowlFood.png" alt="Comfort feature icon">
+      <h4>Work Comfortably</h4>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <!-- ===== Feature Card 6 ===== -->
+    <div class="feature-card">
+      <img src="images/features/SmileyWink.png" alt="User friendly icon">
+      <h4>User Friendly</h4>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+  </div>
+
+</section>
+<!-- ================= FEATURES END ================= -->
+
+<section id="achievements" class="stats">
+
+  <img class="stats-icon" src="images/status/HouseSimple.png" alt="Achievements icon">
+
+ <h2 data-animate="words">
+  Work lazily and achieve the result you want.
+</h2>
+
+<p data-animate="words">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam magni minima
+  tenetur ipsum atque nisi eum maiores animi neque dignissimos ad rem.
+</p>
+
+
+  <div class="stats-grid">
+
+    <!-- ===== Stat 1 ===== -->
+    <div class="stat">
+      <strong class="stat-number" data-target="420" data-suffix="%">0</strong>
+      <span>Data Efficiency</span>
+    </div>
+
+    <!-- ===== Stat 2 ===== -->
+    <div class="stat">
+      <strong class="stat-number" data-target="708" data-suffix="+">0</strong>
+      <span>Conversion Rate</span>
+    </div>
+
+    <!-- ===== Stat 3 ===== -->
+    <div class="stat">
+      <strong class="stat-number" data-target="1820000" data-format="million">0</strong>
+      <span>Active Users</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= STATS END ================= -->
+
+
+<!-- =========================================================
+   PROCRASTINATORS SECTION
+   - Target audience explanation
+   - Interactive content with image swap
+========================================================= -->
+<section id="procrastinators" class="procrastinators">
+
+  <!-- Wrapper for grid layout -->
+  <div class="pro-wrapper">
+
+    <!-- =====================================================
+       LEFT CONTENT
+       - Title
+       - Description
+       - Clickable talking points
+    ====================================================== -->
+    <div class="pro-left">
+
+      <!-- Audience badge -->
+      <span class="pill">Who is it for?</span>
+
+      <!-- Section title -->
+      <h2>What the procrastinators say</h2>
+
+      <!-- Intro text -->
+      <p class="intro">
+        Mi ipsum faucibus vitae aliquet nec. At tempor commodo ullamcorper a
+        lacus. Bibendum at varius vel pharetra vel.
+      </p>
+
+      <!-- =================================================
+         INTERACTIVE POINTS
+         - Click to activate
+         - Syncs with right-side image
+      ================================================= -->
+      <div class="points">
+
+        <!-- ===== Point 1 (Default Active) ===== -->
+        <div class="point active">
+          <h4>Convallis tellus id interdum velit</h4>
+          <p>
+            Est pellentesque elit ullamcorper dignissim cras. In pellentesque
+            massa placerat duis ultricies.
+          </p>
+        </div>
+
+        <!-- ===== Point 2 ===== -->
+        <div class="point">
+          <h4>Id interdum velit laoreet id donec ultrices</h4>
+          <p>
+            Donec massa sapien faucibus et molestie ac feugiat sed. Congue
+            mauris rhoncus aenean vel elit scelerisque.
+          </p>
+        </div>
+
+        <!-- ===== Point 3 ===== -->
+        <div class="point">
+          <h4>Sapien et ligula ullamcorper malesuada</h4>
+          <p>
+            Donec massa sapien faucibus et molestie ac feugiat sed. Congue
+            mauris rhoncus aenean vel elit scelerisque.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- =====================================================
+       RIGHT CONTENT
+       - Visual preview
+       - Changes based on active point
+    ====================================================== -->
+    <div class="pro-right">
+      <img
+        src="images/status/Frame.png"
+        alt="Dashboard interface preview"
+      >
+    </div>
+
+  </div>
+
+</section>
+<!-- ================= PROCRASTINATORS END ================= -->
+<!-- =========================================================
+   TESTIMONIALS SECTION
+   - Social proof from users
+   - Responsive testimonial cards
+========================================================= -->
+<section id="testimonials" class="testimonials">
+
+  <!-- ===== Section Badge ===== -->
+  <span class="pill">Testimonials</span>
+
+  <!-- ===== Section Title ===== -->
+  <h2>What People Say</h2>
+
+  <!-- ===== Section Subtitle ===== -->
+  <p class="subtitle">
+    You can visit our office anytime but please don’t stalk us or don’t be creepy.
+  </p>
+
+  <!-- =====================================================
+     TESTIMONIAL GRID
+     - Auto-fit responsive grid
+     - Each card represents one user review
+  ====================================================== -->
+  <div class="testimonial-grid">
+
+    <!-- =================================================
+       TESTIMONIAL CARD 1
+    ================================================= -->
+    <div class="testimonial-card">
+
+      <!-- Rating -->
+      <div class="stars">★★★★★</div>
+
+      <!-- Review text -->
+      <p class="text" data-animate="words">
+      Lorem ipsum dolor sit amet, consectetur ad-zzz-ing elit. Proin vel urna
+      at metus tempor mattis, or not, whatever.
+    </p>
+
+      <!-- User info -->
+      <div class="user">
+        <img src="images/Testimonials/XAE.png" alt="Profile photo of X_AE_A_13">
+        <div>
+          <strong>X_AE_A_13</strong>
+          <span>Product Designer, slothUI</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =================================================
+       TESTIMONIAL CARD 2
+    ================================================= -->
+    <div class="testimonial-card">
+
+      <div class="stars">★★★★☆</div>
+
+      <p class="text" data-animate="words">
+        Posuere urna nec tincidunt praesent semper feugiat nibh sed. Velit
+        dignissim sodales ut eu.
+      </p>
+
+      <div class="user">
+        <img src="images/Testimonials/Azuny.png" alt="Profile photo of Azunyan U. Wu">
+        <div>
+          <strong>Azunyan U. Wu</strong>
+          <span>CEO, nextlife.ai</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =================================================
+       TESTIMONIAL CARD 3
+    ================================================= -->
+    <div class="testimonial-card">
+
+      <div class="stars">★★★★☆</div>
+
+      <p class="text" data-animate="words">
+        Sit amet est placerat in. Blandit cursus risus at ultrices mi tempus
+        imperdiet.
+      </p>
+
+      <div class="user">
+        <img
+          src="images/Testimonials/mechatronics.png"
+          alt="Profile photo of Mechatronics Yi"
+        >
+        <div>
+          <strong>Mechatronics Yi</strong>
+          <span>CTO, fn4win.ai</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =================================================
+       TESTIMONIAL CARD 4
+    ================================================= -->
+    <div class="testimonial-card">
+
+      <div class="stars">★★★★★</div>
+
+      <p class="text" data-animate="words">
+        Nisi porta lorem mollis aliquam ut porttitor leo. Sed odio morbi quis
+        commodo odio.
+      </p>
+
+      <div class="user">
+        <img src="images/Testimonials/orack.png" alt="Profile photo of Oarack Babama">
+        <div>
+          <strong>Oarack Babama</strong>
+          <span>Former President of US</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =================================================
+       TESTIMONIAL CARD 5
+    ================================================= -->
+    <div class="testimonial-card">
+
+      <div class="stars">★★★★☆</div>
+
+      <p class="text" data-animate="words">
+        Accumsan tortor posuere ac ut consequat. Quis varius quam quisque id
+        diam vel.
+      </p>
+
+      <div class="user">
+        <img src="images/Testimonials/sailor.png" alt="Profile photo of Saylor Twift">
+        <div>
+          <strong>Saylor Twift</strong>
+          <span>Famous Singer</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =================================================
+       TESTIMONIAL CARD 6
+    ================================================= -->
+    <div class="testimonial-card">
+
+      <div class="stars">★★★★☆</div>
+
+      <p class="text" data-animate="words">
+        Venenatis cras sed felis eget velit aliquet. Velit scelerisque in dictum
+        non consectetur.
+      </p>
+
+      <div class="user">
+        <img src="images/Testimonials/Asuna.png" alt="Profile photo of MMMMM-jhhh">
+        <div>
+          <strong>MMMMM-jhhh</strong>
+          <span>Virtual Swordsman</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =================================================
+       TESTIMONIAL CARD 7
+    ================================================= -->
+    <div class="testimonial-card">
+
+      <div class="stars">★★★★☆</div>
+
+      <p class="text" data-animate="words">
+        Venenatis cras sed felis eget velit aliquet. Velit scelerisque in dictum
+        non consectetur.
+      </p>
+
+      <div class="user">
+        <img src="images/Testimonials/boe-jidan.png" alt="Profile photo ofAjjjj hh">
+        <div>
+          <strong>Ajjjj hh</strong>
+          <span>Virtual Swordsman</span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- =================================================
+       TESTIMONIAL CARD 8
+    ================================================= -->
+    <div class="testimonial-card">
+
+      <div class="stars">★★★★☆</div>
+
+      <p class="text" data-animate="words">
+        Venenatis cras sed felis eget velit aliquet. Velit scelerisque in dictum
+        non consectetur.
+      </p>
+
+      <div class="user">
+        <img src="images/Testimonials/yyy.png" alt="Profile photo of VVFFF JJJ  Asuna Yuuki">
+        <div>
+          <strong>VVFFF JJJ</strong>
+          <span>Virtual Swordsman</span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- =================================================
+       TESTIMONIAL CARD 9
+    ================================================= -->
+    <div class="testimonial-card">
+
+      <div class="stars">★★★★☆</div>
+
+      <p class="text" data-animate="words">
+        Venenatis cras sed felis eget velit aliquet. Velit scelerisque in dictum
+        non consectetur.
+      </p>
+
+      <div class="user">
+        <img src="images/Testimonials/zzz.png" alt="Profile photo of HH jjj">
+        <div>
+          <strong>HH jjj</strong>
+          <span>Virtual Swordsman</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ================= TESTIMONIALS END ================= -->
+
+
+<!-- =========================================================
+   OFFICE / LOCATIONS SECTION
+   - Physical office locations
+   - Global presence showcase
+========================================================= -->
+<section id="office" class="office">
+
+  <span class="pill">Visit Us Anytime</span>
+  <h2>Our Office</h2>
+
+  <p class="office-subtitle">
+    You can visit our office anytime but please don’t stalk us or don’t be creepy.
+  </p>
+
+  <div class="office-grid">
+
+    <!-- ===== JAPAN ===== -->
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=221b+Banzai+Street+Tokyo+Japan"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="office-card"
+    >
+      <img src="images/Testimonials/MapPin.png" alt="Location pin icon">
+      <h4>Japan</h4>
+      <p>
+        221b Banzai Street<br>
+        Tokyo, TO 77812
+      </p>
+      <span class="map-hint">View on Google Maps →</span>
+    </a>
+
+    <!-- ===== USA ===== -->
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=221b+Freedom+Street+New+York+USA"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="office-card"
+    >
+      <img src="images/Testimonials/MapPin.png" alt="Location pin icon">
+      <h4>USA</h4>
+      <p>
+        221b Freedom Street<br>
+        New York, NY 21231
+      </p>
+      <span class="map-hint">View on Google Maps →</span>
+    </a>
+
+    <!-- ===== CANADA ===== -->
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=221b+Maple+Syrup+Street+Ottawa+Canada"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="office-card"
+    >
+      <img src="images/Testimonials/MapPin.png" alt="Location pin icon">
+      <h4>Canada</h4>
+      <p>
+        221b Maple Syrup Street<br>
+        Ottawa, OW 77847
+      </p>
+      <span class="map-hint">View on Google Maps →</span>
+    </a>
+
+    <!-- ===== SOUTH KOREA ===== -->
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=221b+Samyang+Street+Gangnam+Seoul"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="office-card"
+    >
+      <img src="images/Testimonials/MapPin.png" alt="Location pin icon">
+      <h4>South Korea</h4>
+      <p>
+        221b Samyang Street<br>
+        Gangnam, GM 22124
+      </p>
+      <span class="map-hint">View on Google Maps →</span>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ================= OFFICE END ================= -->
+<!-- =========================================================
+   FAQ SECTION
+   - Frequently Asked Questions
+   - Accessible accordion using <details> & <summary>
+========================================================= -->
+<section id="faq" class="faq">
+
+  <!-- ===== Section Badge ===== -->
+  <span class="pill">FAQ</span>
+
+  <!-- ===== Section Title ===== -->
+  <h2>Frequently Asked Questions</h2>
+
+  <!-- ===== Section Description ===== -->
+  <p class="faq-subtitle">
+    Fermentum iaculis eu non diam phasellus vestibulum. Volutpat commodo sed
+    egestas egestas fringilla phasellus. Donec ac odio tempor orci dapibus
+    ultrices.
+  </p>
+
+  <!-- =====================================================
+     FAQ LIST
+     - Only one item stays open at a time (JS controlled)
+     - First item open by default
+  ====================================================== -->
+  <div class="faq-list">
+
+    <!-- ===== FAQ ITEM 1 (Default Open) ===== -->
+    <details open>
+      <summary>
+        Enim sed faucibus turpis in eu mi bibendum neque egestas?
+      </summary>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dicta
+        recusandae inventore ad, eaque odit quisquam nam nihil necessitatibus
+        maiores, culpa velit alias id unde officia omnis reiciendis perspiciatis
+        voluptatum suscipit sed ab modi aliquid, dolores incidunt!
+      </p>
+    </details>
+
+    <!-- ===== FAQ ITEM 2 ===== -->
+    <details>
+      <summary>
+        Amet consectetur adipiscing elit pellentesque habitant morbi tristique?
+      </summary>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti autem
+        deserunt quaerat, quis placeat possimus, illum perferendis reprehenderit
+        dicta blanditiis expedita amet tempore nobis rem cupiditate aperiam.
+      </p>
+    </details>
+
+    <!-- ===== FAQ ITEM 3 ===== -->
+    <details>
+      <summary>
+        Elit pellentesque habitant morbi tristique senectus?
+      </summary>
+      <p>
+        Mattis ullamcorper velit sed ullamcorper morbi tincidunt. In metus
+        vulputate eu scelerisque felis imperdiet proin fermentum leo.
+      </p>
+    </details>
+
+    <!-- ===== FAQ ITEM 4 ===== -->
+    <details>
+      <summary>
+        Gravida quis blandit turpis cursus in hac?
+      </summary>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+        deleniti voluptate dicta nihil quaerat, facilis nemo consequatur dolorem
+        recusandae quos impedit exercitationem quibusdam eum mollitia.
+      </p>
+    </details>
+
+    <!-- ===== FAQ ITEM 5 ===== -->
+    <details>
+      <summary>
+        Est pellentesque elit ullamcorper dignissim cras?
+      </summary>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam,
+        consequatur consequuntur totam nostrum recusandae aliquam ea perferendis
+        atque laudantium, molestias ut omnis.
+      </p>
+    </details>
+
+  </div>
+
+</section>
+<!-- ================= FAQ END ================= -->
+
+
+<!-- =========================================================
+   DOWNLOAD / CTA SECTION
+   - Primary call-to-action
+   - Encourages app installation
+========================================================= -->
+<section id="download" class="download">
+
+  <!-- Wrapper for grid layout -->
+  <div class="download-wrapper">
+
+    <!-- =====================================================
+       LEFT CONTENT
+       - Title
+       - Description
+       - CTA buttons
+    ====================================================== -->
+    <div class="download-left">
+
+      <!-- Section Heading -->
+      <h2>Let’s Download The App.</h2>
+
+      <!-- Description -->
+      <p>
+        Velit scelerisque in dictum non consectetur. Felis eget velit aliquet
+        sagittis. Ultricies integer quis auctor elit sed vulputate mi. Massa id
+        neque aliquam vestibulum morbi blandit cursus.
+      </p>
+
+      <!-- Call-to-action buttons -->
+      <div class="download-buttons">
+  <button class="btn-outline">Learn More</button>
+  <button class="btn-primary">Get Started</button>
+</div>
+
+
+    </div>
+
+    <!-- =====================================================
+       RIGHT CONTENT
+       - App preview image
+    ====================================================== -->
+    <div class="download-right">
+      <img
+        class="phone"
+        src="images/dowonload/phone1.png"
+        alt="Mobile application preview"
+      >
+    </div>
+
+  </div>
+
+</section>
+<!-- ================= DOWNLOAD END ================= -->
+<!-- =========================================================
+   FOOTER SECTION
+   - Site navigation
+   - Legal & support links
+   - Branding & copyright
+========================================================= -->
+<footer id="footer" class="footer">
+
+  <!-- =====================================================
+     FOOTER TOP
+     - Multi-column navigation links
+     - Responsive grid layout
+  ====================================================== -->
+  <div class="footer-top" role="navigation" aria-label="Footer Navigation">
+
+  <!-- ===== Site Map ===== -->
+  <nav class="footer-col" aria-labelledby="footer-sitemap">
+    <h4 id="footer-sitemap">Site Map</h4>
+    <ul>
+      <li><a href="/">Homepage</a></li>
+      <li><a href="/product">Product</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/technology">Technology</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Services ===== -->
+  <nav class="footer-col" aria-labelledby="footer-services">
+    <h4 id="footer-services">Services</h4>
+    <ul>
+      <li><a href="#">Consulting</a></li>
+      <li><a href="#">UI/UX Design</a></li>
+      <li><a href="#">Web Development</a></li>
+      <li><a href="#">App Development</a></li>
+      <li><a href="#">Automation</a></li>
+      <li><a href="#">Maintenance</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Product ===== -->
+  <nav class="footer-col" aria-labelledby="footer-product">
+    <h4 id="footer-product">Product</h4>
+    <ul>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Integrations</a></li>
+      <li><a href="#">Roadmap</a></li>
+      <li><a href="#">Changelog</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Releases</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Help & Support ===== -->
+  <nav class="footer-col" aria-labelledby="footer-support">
+    <h4 id="footer-support">Help & Support</h4>
+    <ul>
+      <li><a href="#">Help Center</a></li>
+      <li><a href="#">Live Chat</a></li>
+      <li><a href="#">Email Support</a></li>
+      <li><a href="#">Submit Ticket</a></li>
+      <li><a href="#">System Status</a></li>
+      <li><a href="#">Community</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Legal ===== -->
+  <nav class="footer-col" aria-labelledby="footer-legal">
+    <h4 id="footer-legal">Legal</h4>
+    <ul>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+      <li><a href="#">Cookie Policy</a></li>
+      <li><a href="#">Data Protection</a></li>
+      <li><a href="#">AI Ethics</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Pricing ===== -->
+  <nav class="footer-col" aria-labelledby="footer-pricing">
+    <h4 id="footer-pricing">Pricing</h4>
+    <ul>
+      <li><a href="#">Free Plan</a></li>
+      <li><a href="#">Starter</a></li>
+      <li><a href="#">Professional</a></li>
+      <li><a href="#">Enterprise</a></li>
+      <li><a href="#">Compare Plans</a></li>
+    </ul>
+  </nav>
+
+</div>
+
+  <!-- ================= FOOTER TOP END ================= -->
+
+
+  <!-- ===== Divider ===== -->
+  <div class="footer-divider"></div>
+
+
+  <!-- =====================================================
+     FOOTER BOTTOM
+     - Brand logo
+     - Back-to-top button
+     - Copyright
+  ====================================================== -->
+  <div class="footer-bottom">
+
+    <!-- Brand logo -->
+    <div class="footer-logo">
+      <img
+        src="images/hero-section/footer.png"
+        alt="slothUI brand logo"
+      >
+    </div>
+
+    <!-- Back to top button (JS controlled) -->
+  <button
+  class="back-to-top"
+  aria-label="Back to top"
+  title="Scroll to top"
+>
+  <span>↑</span>
+</button>
+
+
+
+    <!-- Copyright -->
+    <p>
+      Copyright © 2026 slothUI.
+      All Rights Reserved.
+    </p>
+
+  </div>
+
+</footer>
+<!-- ================= FOOTER END ================= -->
+
+
+<!-- =========================================================
+   MAIN JAVASCRIPT FILE
+   - Handles interactions, animations & theme
+========================================================= -->
+
+
+<script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>

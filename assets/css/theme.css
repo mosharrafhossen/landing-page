@@ -1,0 +1,86 @@
+/* =========================================================
+   DARK THEME OVERRIDES
+========================================================= */
+
+[data-theme="dark"] {
+  --bg: #020617;
+  --text: #e5e7eb;
+  --card: #020617;
+  --muted: #94a3b8;
+  --primary: #818cf8;
+  --border: #1e293b;
+}
+
+/* Dark header polish */
+[data-theme="dark"] .header {
+  background: color-mix(in srgb, var(--card) 90%, transparent);
+}
+
+/* Dark mode logo */
+[data-theme="dark"] .logo {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.9),
+    rgba(2, 6, 23, 0.9)
+  );
+  border-color: #1e293b;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .logo:hover {
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+
+
+
+
+
+/* =========================================================
+   BRANDS – DARK MODE OVERRIDES
+========================================================= */
+
+/* Base dark logo treatment */
+[data-theme="dark"] .brand-row img {
+  filter: invert(1) brightness(1) !important;
+  opacity: 0.9;
+}
+
+/* Dark mode hover */
+[data-theme="dark"] .brand-row img:hover {
+  filter: invert(1) brightness(1.15);
+  transform: translateY(-3px) scale(1.04);
+}
+
+/* Softer dim for siblings */
+[data-theme="dark"] .brand-row:hover img {
+  opacity: 0.6;
+}
+
+[data-theme="dark"] .brand-row:hover img:hover {
+  opacity: 1;
+}
+
+
+
+/* =========================================================
+   FOOTER – DARK MODE
+========================================================= */
+
+[data-theme="dark"] .footer {
+  border-top-color: #1e293b;
+}
+
+[data-theme="dark"] .footer-divider {
+  background: #1e293b;
+}
+
+[data-theme="dark"] .back-to-top {
+  background: #020617;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.75);
+}

@@ -1,0 +1,86 @@
+/* =========================================================
+   THEME VARIABLES
+   - Global design tokens
+========================================================= */
+
+/* 🌞 Light Theme (Default) */
+:root {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card: #ffffff;
+  --muted: #475569;
+  --primary: #4f46e5;
+  --border: #e5e7eb;
+}
+
+/* =========================================================
+   GLOBAL RESET & BASE STYLES
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Offset for sticky header */
+body {
+  padding-top: 80px;
+}
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
+/* =========================================================
+   WORD BY WORD TEXT ANIMATION
+========================================================= */
+
+[data-animate="words"] {
+  overflow: hidden;
+}
+
+.word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(18px);
+
+  transition:
+    opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.word.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-card,
+  .word {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
